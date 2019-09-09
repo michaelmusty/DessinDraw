@@ -1,0 +1,4 @@
+174,0
+S,TriangleDrawDessinTexifyString,Replace all double backslashes with quadruple backslashes. Writing quadruple backslashes to file makes them double backslashes and then when reading database info into Magma double backslashes get you single backslashes...ya know...special characters!,0,1,0,0,0,0,0,0,0,298,,298,-38,-38,-38,-38,-38
+S,TriangleDrawDessinToFile,"Generates latex code to conformally draw a dessin for Gamma to a file in the current working directory. If filename is not specified, then a name is generated using the database naming convention",0,1,0,0,0,0,0,0,0,GrpPSL2,,298,-38,-38,-38,-38,-38
+S,TriangleDrawDessin,"Returns a string of latex text to draw a conformal dessin for Gamma and saves the string to the Gamma attribute Gamma`TriangleDessin. The default precision is set to 8, but higher values may be needed for fundamental domains ""close"" to the boundary",0,1,0,0,0,0,0,0,0,GrpPSL2,,298,-38,-38,-38,-38,-38

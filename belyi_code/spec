@@ -1,0 +1,28 @@
+{
+  auts.m
+  basics.m
+  cosets.m
+  draw.m
+  belyi_main.m
+  extract.m
+  galoisorbits.m
+  genuszero.m
+  genuszero_hardcoded.m
+  genusone.m
+  hackobj.m
+  hyperelliptic.m
+  mass.m
+  newton_hyperelliptic-new.m
+  newton-new.m
+  nonhyperbolic.m
+  passports.m
+  powser_iter_arfed.m
+  reduce.m
+  recognition.m
+  sanity_check_local.m
+  theta.m
+  triangle.m
+  triangle_phi.m
+  values.m
+	calculus.m
+}

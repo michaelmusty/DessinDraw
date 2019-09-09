@@ -1,0 +1,2 @@
+174,0
+S,TriangleRamificationValues,"Input: Sk: A sequence of series expansions for modular forms of weight k of the triangle group Gamma Gamma: The triangle group Output: The ramification values for ratios of elements of Sk. Params: If ""NormalizeByTheta"", then each basis element fi of Sk is multiplied by Theta^si where si is the order of vanishing of fi at the center",1,0,1,82,1,82,0,286,2,0,0,0,0,0,0,0,GrpPSL2,,0,0,82,,-1,-38,-38,-38,-38,-38
