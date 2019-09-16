@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}% 
+\contentsline {chapter}{References}{1}{section.1}% 
+\contentsline {section}{\tocsection {}{}{References}}{1}{section*.2}% 

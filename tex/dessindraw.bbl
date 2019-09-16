@@ -1,0 +1,17 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{MR3362631}
+J.~Sijsling and J.~Voight, \emph{On computing {B}elyi maps}, Num\'{e}ro
+  consacr\'{e} au trimestre ``{M}\'{e}thodes arithm\'{e}tiques et
+  applications'', automne 2013, Publ. Math. Besan\c{c}on Alg\`ebre Th\'{e}orie
+  Nr., vol. 2014/1, Presses Univ. Franche-Comt\'{e}, Besan\c{c}on, 2014,
+  pp.~73--131. \MR{3362631}
+
+\end{thebibliography}
