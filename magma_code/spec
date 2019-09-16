@@ -1,0 +1,12 @@
+{
+  triples
+  {
+    auts.m
+    passports.m
+    refined.m
+  }
+  coset_graph
+  {
+    triple_to_coset_graph.m
+  }
+}
