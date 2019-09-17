@@ -7,7 +7,36 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
-\bibitem{MR3362631}
+\bibitem{cleancatalog}
+N.~M. Adrianov, N.~Ya. Amburg, V.~A. Dr\"{e}mov, Yu.~Yu. Kochetkov, E.~M.
+  Kre\u{\i}nes, Yu.~A. Levitskaya, V.~F. Nasretdinova, and G.~B. Shabat,
+  \emph{A catalogue of {B}ely\u{\i} functions of dessins d'enfants with at most
+  four edges}, Fundam. Prikl. Mat. \textbf{13} (2007), no.~6, 35--112.
+  \MR{2476028}
+
+\bibitem{weightedtrees}
+N.~M. Adrianov and A.~K. Zvonkin, \emph{Weighted trees with primitive edge
+  rotation groups}, Fundam. Prikl. Mat. \textbf{18} (2013), no.~6, 5--50.
+  \MR{3431854}
+
+\bibitem{shabatpolys}
+Jean B\'{e}tr\'{e}ma and Alexander Zvonkin, \emph{Plane trees and {S}habat
+  polynomials}, Proceedings of the 5th {C}onference on {F}ormal {P}ower
+  {S}eries and {A}lgebraic {C}ombinatorics ({F}lorence, 1993), vol. 153, 1996,
+  pp.~47--58. \MR{1394945}
+
+\bibitem{KMSV}
+Michael Klug, Michael Musty, Sam Schiavone, and John Voight, \emph{Numerical
+  calculation of three-point branched covers of the projective line}, LMS J.
+  Comput. Math. \textbf{17} (2014), no.~1, 379--430. \MR{3356040}
+
+\bibitem{belyidb}
+Michael Musty, Sam Schiavone, Jeroen Sijsling, and John Voight, \emph{A
+  database of {B}elyi maps}, Proceedings of the {T}hirteenth {A}lgorithmic
+  {N}umber {T}heory {S}ymposium, Open Book Ser., vol.~2, Math. Sci. Publ.,
+  Berkeley, CA, 2019, pp.~375--392. \MR{3952023}
+
+\bibitem{SV}
 J.~Sijsling and J.~Voight, \emph{On computing {B}elyi maps}, Num\'{e}ro
   consacr\'{e} au trimestre ``{M}\'{e}thodes arithm\'{e}tiques et
   applications'', automne 2013, Publ. Math. Besan\c{c}on Alg\`ebre Th\'{e}orie

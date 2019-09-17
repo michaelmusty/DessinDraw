@@ -1,4 +1,15 @@
 \babel@toc {english}{}
 \contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}% 
-\contentsline {chapter}{References}{1}{section.1}% 
-\contentsline {section}{\tocsection {}{}{References}}{1}{section*.2}% 
+\contentsline {section}{\tocsection {}{2}{Equivalent categories}}{1}{section.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{Dessins}}{1}{subsection.2.1}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Clean dessins}}{1}{subsection.2.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.3}{Ribbon graphs}}{1}{subsection.2.3}% 
+\contentsline {section}{\tocsection {}{3}{Existing catalogs}}{1}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{Drawing techniques}}{1}{section.4}% 
+\contentsline {section}{\tocsection {}{5}{Degree $\leq 4$}}{1}{section.5}% 
+\contentsline {section}{\tocsection {}{6}{Degree $5$}}{2}{section.6}% 
+\contentsline {section}{\tocsection {}{7}{Degree $6$}}{2}{section.7}% 
+\contentsline {section}{\tocsection {}{8}{Degree $7$}}{2}{section.8}% 
+\contentsline {section}{\tocsection {}{9}{Degree $8$}}{2}{section.9}% 
+\contentsline {chapter}{References}{2}{section.9}% 
+\contentsline {section}{\tocsection {}{}{References}}{2}{section*.2}% 
