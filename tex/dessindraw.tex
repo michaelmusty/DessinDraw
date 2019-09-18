@@ -4,217 +4,400 @@
 
 \documentclass{amsart}
 
-\usepackage[utf8]{inputenc}
-\usepackage[OT2,T1]{fontenc}
-\usepackage[english]{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BELYIDB
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{amssymb,amsthm,amsmath,amsxtra}
-% \usepackage[all]{xy}
-%\usepackage{fullpage}
-\usepackage{comment}
-\usepackage{graphicx}
-\usepackage{hyperref}  % incompatible with showkeys
-\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue}
-% \usepackage[hypcap]{caption}
-% \usepackage[notcite]{showkeys}	
-% \usepackage[margin = 1.5in]{geometry}
-% \usepackage[linesnumbered]{algorithm2e}
-\usepackage{color}
-\usepackage{array}
-\usepackage{diagbox}
-\usepackage{colonequals}
+%\usepackage[utf8]{inputenc}
+%\usepackage[OT2,T1]{fontenc}
+%\usepackage[english]{babel}
 
-\usepackage{placeins} % for \FloatBarrier command
+%\usepackage{amssymb,amsthm,amsmath,amsxtra}
+%% \usepackage[all]{xy}
+%%\usepackage{fullpage}
+%\usepackage{comment}
+%\usepackage{graphicx}
+%\usepackage{hyperref}  % incompatible with showkeys
+%\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue}
+%% \usepackage[hypcap]{caption}
+%% \usepackage[notcite]{showkeys}	
+%% \usepackage[margin = 1.5in]{geometry}
+%% \usepackage[linesnumbered]{algorithm2e}
+%\usepackage{color}
+%\usepackage{array}
+%\usepackage{diagbox}
+%\usepackage{colonequals}
 
-\usepackage[dvipsnames]{xcolor}
+%\usepackage{placeins} % for \FloatBarrier command
 
+%\usepackage[dvipsnames]{xcolor}
+
+%\usepackage{chngcntr}
+%\usepackage{booktabs}
+%\usepackage{mathrsfs}
+%%\usepackage{pstricks}
+%%\usepackage{pst-node,pst-tree}
+%%\usepackage{pstricks-add}
+%%\usepackage{auto-pst-pdf}
+
+%\numberwithin{equation}{subsection}
+%\renewcommand{\thefigure}{\arabic{figure}}
+
+%\theoremstyle{plain}
+%\newtheorem{thm}[equation]{Theorem}
+%\newtheorem{prop}[equation]{Proposition}
+%\newtheorem{lem}[equation]{Lemma}
+%\newtheorem{cor}[equation]{Corollary}
+%\newtheorem{prob}[equation]{Problem}
+%\newtheorem{ques}[equation]{Question}
+%\newtheorem{conj}[equation]{Conjecture}
+%\newtheorem*{cor*}{Corollary}
+%\newtheorem*{prob*}{Problem}
+%\newtheorem*{thm*}{Theorem}
+%\newtheorem*{thma*}{Theorem A}
+%\newtheorem*{thmb*}{Theorem B}
+%\newtheorem*{thmc*}{Theorem C}
+
+%\theoremstyle{definition}
+%\newtheorem{defn}[equation]{Definition}
+%\newtheorem{alg}[equation]{Algorithm}
+%\newtheorem{exm}[equation]{Example}
+
+%\theoremstyle{remark}
+%\newtheorem{rmk}[equation]{Remark}
+
+%\newenvironment{enumalph}
+%{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\alph{enumi})}}}
+%{\end{enumerate}}
+
+%\newenvironment{enumalgalph}
+%{\begin{enumerate}\renewcommand{\labelenumii}{\alph{enumii}.}}
+%{\end{enumerate}}
+
+%\newenvironment{enumroman}
+%{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\roman{enumi})}}}
+%{\end{enumerate}}
+
+%\newenvironment{enumalg}
+%{\begin{enumerate}\renewcommand{\labelenumi}{\arabic{enumi}.}}
+%{\end{enumerate}}
+%\usepackage[inline, shortlabels]{enumitem}
+%%\usepackage{enumerate}
+%\newcommand{\defi}[1]{\textit{\textsf{#1}}} % for defined terms
+
+
+%\setlength{\hfuzz}{4pt}
+
+%\DeclareMathOperator{\arccosh}{arccosh}
+%\DeclareMathOperator{\Aut}{Aut}
+%\DeclareMathOperator{\Cl}{Cl}
+%\DeclareMathOperator{\cyc}{cyc}
+%\DeclareMathOperator{\ddiv}{div}
+%\DeclareMathOperator{\disc}{disc}
+%\DeclareMathOperator{\End}{End}
+%\DeclareMathOperator{\Frob}{Frob}
+%\DeclareMathOperator{\Gal}{Gal}
+%\DeclareMathOperator{\id}{id}
+%\DeclareMathOperator{\impart}{Im}
+%\DeclareMathOperator{\Inn}{Inn}
+%\DeclareMathOperator{\Isom}{Isom}
+%\DeclareMathOperator{\M}{M}
+%\DeclareMathOperator{\Mon}{Mon}
+%\DeclareMathOperator{\N}{N}
+%\DeclareMathOperator{\opdiv}{div}
+%\DeclareMathOperator{\nrd}{nrd}
+%\DeclareMathOperator{\ord}{ord}
+%\DeclareMathOperator{\Out}{Out}
+%\DeclareMathOperator{\PGL}{PGL}
+%\DeclareMathOperator{\PSL}{PSL}
+%\DeclareMathOperator{\Real}{Re}
+%\DeclareMathOperator{\repart}{Re}
+%\DeclareMathOperator{\SO}{SO}
+%\DeclareMathOperator{\Spec}{Spec}
+%\DeclareMathOperator{\Stab}{Stab}
+%\DeclareMathOperator{\SL}{SL}
+%\DeclareMathOperator{\GL}{GL}
+%\DeclareMathOperator{\tr}{tr}
+%\DeclareMathOperator{\(P)SL}{(P)SL}
+%\DeclareMathOperator{\PSU}{PSU}
+
+%\let\div\relax
+%\DeclareMathOperator{\div}{div}
+
+%\newcommand{\C}{\mathbb C}
+%\newcommand{\F}{\mathbb F}
+%\newcommand{\HH}{\mathbb H}
+%\newcommand{\PP}{\mathbb P}
+%\newcommand{\Q}{\mathbb Q}
+%\newcommand{\R}{\mathbb R}
+%\newcommand{\Z}{\mathbb Z}
+%\newcommand{\Qbar}{{\mathbb Q}^{\textup{al}}}
+%\newcommand{\Qal}{{\mathbb Q}^{\textup{al}}}
+%\newcommand{\kbar}{\overline{k}}
+%\newcommand{\Qab}{{\mathbb Q}_{\textup{ab}}}
+
+%\newcommand{\T}{\mathcal T}
+%\renewcommand{\L}{\mathscr L}
+%\DeclareMathOperator{\Princ}{Princ}
+
+%\newcommand{\newt}{\mu}
+
+%% \newcommand{\Belyi}{Bely\u{\i}}
+%\newcommand{\Belyi}{Belyi}
+
+%\newcommand{\fraka}{\mathfrak{a}}
+%\newcommand{\frakd}{\mathfrak{d}}
+%\newcommand{\frakn}{\mathfrak{n}}
+%\newcommand{\frakM}{\mathfrak{M}}
+%\newcommand{\frakN}{\mathfrak{N}}
+%\newcommand{\frakp}{\mathfrak{p}}
+%\newcommand{\frakP}{\mathfrak{P}}
+%\newcommand{\frakq}{\mathfrak{q}}
+
+%\newcommand{\calD}{\mathcal{D}}
+%\newcommand{\calG}{\mathcal{G}}
+%\newcommand{\calH}{\mathcal{H}}
+%\newcommand{\calM}{\mathcal{M}}
+%\newcommand{\calO}{\mathcal{O}}
+%\newcommand{\calP}{\mathcal{P}}
+
+%\newcommand{\psmod}[1]{~(\textup{\text{mod}}~{#1})}
+%\newcommand{\legen}[2]{\left(\frac{#1}{#2}\right)}
+
+%\newcommand{\quat}[2]{\displaystyle{\biggl(\frac{#1}{#2}\biggr)}}
+
+%\newcommand{\la}{\langle}
+%\newcommand{\ra}{\rangle}
+
+%\newcommand{\gunder}{\underline{g}}
+%\newcommand{\tunder}{\underline{t}}
+%\newcommand{\Cunder}{\underline{C}}
+
+%\DeclareMathOperator{\opchar}{char}
+
+%\newcommand{\Deltabar}{\overline{\Delta}}
+%\newcommand{\gammabar}{\overline{\gamma}}
+%\newcommand{\Gammabar}{\overline{\Gamma}}
+%\newcommand{\Fbar}{\overline{F}}
+%\newcommand{\Bbar}{\overline{B}}
+%\newcommand{\calObar}{\overline{\mathcal{O}}}
+%\newcommand{\frakpbar}{\overline{\mathfrak{p}}}
+%\newcommand{\frakdbar}{\overline{\mathfrak{d}}}
+
+%\newcommand{\zetabar}{\overline{\zeta}}
+
+%\newcommand{\sbwk}{{}_{\textup{wkrat}}}
+%\newcommand{\sbnum}{{}_{\textup{num}}}
+%\newcommand{\sbrat}{{}_{\textup{rat}}}
+%\newcommand{\sbtr}{{}_{\textup{tr}}}
+%\newcommand{\sbtors}{{}_{\textup{tors}}}
+%\newcommand{\lcm}{\operatorname{lcm}}
+%\newcommand{\ns}{\operatorname{ns}}
+
+%\newcommand{\prodprime}{\sideset{}{^{'}}{\prod}}
+
+%\newcommand{\Bhat}{\widehat{B}}
+%\newcommand{\Fhat}{\widehat{F}}
+%\newcommand{\PGamma}{\mathrm{P}\Gamma}
+%\newcommand{\calOhat}{\widehat{\mathcal O}}
+%\newcommand{\gammahat}{\widehat{\gamma}}
+%\newcommand{\alphahat}{\widehat{\alpha}}
+%\newcommand{\ahat}{\widehat{a}}
+%\newcommand{\Zhat}{\widehat{\mathbb Z}}
+%\newcommand{\ZFhat}{\widehat{\mathbb Z}_F}
+
+%\newcommand{\Part}{\mathrm{Part}}
+
+%\newcommand{\jv}[1]{{\color{red} \sf JV: [#1]}}
+
+%\newcommand{\sss}[1]{{\color{green} \sf S$^3$: [#1]}}
+%\newcommand{\mm}[1]{{\color{blue} \sf MM: [#1]}}
+%\newcommand{\mk}[1]{{\color{orange} \sf MK: [#1]}}
+
+%\newcommand{\jrs}[1]{{\color{cyan} \sf JRS: [#1]}}
+
+%\setcounter{tocdepth}{1}
+
+%\everymath{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Additional Packages (add as desired)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amssymb,amsthm,amsxtra}
+\usepackage{algorithm}
+% \usepackage{showkeys}
 \usepackage{chngcntr}
+\usepackage{mathrsfs} 
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue}
+\usepackage{tikz}
+\usepackage{colonequals}
+% \usepackage{caption}
+\usepackage{enumerate}
 \usepackage{booktabs}
-\usepackage{mathrsfs}
-%\usepackage{pstricks}
-%\usepackage{pst-node,pst-tree}
-%\usepackage{pstricks-add}
-%\usepackage{auto-pst-pdf}
+\usepackage{longtable}
+\usetikzlibrary{arrows,calc,automata,shadows,backgrounds,positioning,intersections,fadings,decorations.pathreplacing,shapes,matrix}
+\usepackage{tikz-cd}
+\tikzset{commutative diagrams/.cd, arrow style = tikz, diagrams = {>=latex}}
+\tikzset{>=latex}
+\usepackage{filecontents}
+\usepackage{pgfplots, pgfplotstable}
+\usepgfplotslibrary{statistics}
 
-\numberwithin{equation}{subsection}
-\renewcommand{\thefigure}{\arabic{figure}}
+%%%%%% begin TCOLORBOX
+\usepackage{tcolorbox, listings}
+% \lstdefinestyle{mystyle}{
+%   basicstyle=\ttfamily
+% %  basicstyle=\ttfamily,
+% %  numbers=left,
+% %  numberstyle=\tiny,
+% %  numbersep=5pt
+% }
+\tcbuselibrary{listings, skins, breakable}
+\newtcblisting{magma}{%
+  title={\textsf{Magma}},
+  %every listing line={\textcolor{blue}{\texttt{> }}},
+  arc=0mm,
+  top=0mm,
+  bottom=0mm,
+  left=3mm,
+  right=0mm,
+  width=\textwidth,
+  boxrule=0.5pt,
+  colback=gray!20,
+  %spartan,
+  listing only,
+  % listing options={style=mystyle},
+  breakable
+}
+\newtcblisting{code}{%
+  title={\textsf{Shell}},
+  %every listing line={\textcolor{blue}{\texttt{> }}},
+  arc=0mm,
+  top=0mm,
+  bottom=0mm,
+  left=3mm,
+  right=0mm,
+  width=\textwidth,
+  boxrule=0.5pt,
+  colback=gray!20,
+  %spartan,
+  listing only,
+  % listing options={style=mystyle},
+  breakable
+}
+%%%%%% end TCOLORBOX
 
-\theoremstyle{plain}
-\newtheorem{thm}[equation]{Theorem}
-\newtheorem{prop}[equation]{Proposition}
-\newtheorem{lem}[equation]{Lemma}
-\newtheorem{cor}[equation]{Corollary}
-\newtheorem{prob}[equation]{Problem}
-\newtheorem{ques}[equation]{Question}
-\newtheorem{conj}[equation]{Conjecture}
-\newtheorem*{cor*}{Corollary}
-\newtheorem*{prob*}{Problem}
-\newtheorem*{thm*}{Theorem}
-\newtheorem*{thma*}{Theorem A}
-\newtheorem*{thmb*}{Theorem B}
-\newtheorem*{thmc*}{Theorem C}
+%\usepackage{index} %Uncomment if you would like to have an index. Compiling with an index takes more work than compiling without one. You will have to look up how to use the index package.
 
-\theoremstyle{definition}
-\newtheorem{defn}[equation]{Definition}
-\newtheorem{alg}[equation]{Algorithm}
-\newtheorem{exm}[equation]{Example}
-
-\theoremstyle{remark}
-\newtheorem{rmk}[equation]{Remark}
-
-\newenvironment{enumalph}
-{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\alph{enumi})}}}
-{\end{enumerate}}
-
-\newenvironment{enumalgalph}
-{\begin{enumerate}\renewcommand{\labelenumii}{\alph{enumii}.}}
-{\end{enumerate}}
-
-\newenvironment{enumroman}
-{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\roman{enumi})}}}
-{\end{enumerate}}
-
-\newenvironment{enumalg}
-{\begin{enumerate}\renewcommand{\labelenumi}{\arabic{enumi}.}}
-{\end{enumerate}}
-\usepackage[inline, shortlabels]{enumitem}
-%\usepackage{enumerate}
-\newcommand{\defi}[1]{\textit{\textsf{#1}}} % for defined terms
-
-
-\setlength{\hfuzz}{4pt}
-
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\Aut}{Aut}
-\DeclareMathOperator{\Cl}{Cl}
-\DeclareMathOperator{\cyc}{cyc}
-\DeclareMathOperator{\ddiv}{div}
-\DeclareMathOperator{\disc}{disc}
-\DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\Frob}{Frob}
-\DeclareMathOperator{\Gal}{Gal}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\impart}{Im}
-\DeclareMathOperator{\Inn}{Inn}
-\DeclareMathOperator{\Isom}{Isom}
-\DeclareMathOperator{\M}{M}
-\DeclareMathOperator{\Mon}{Mon}
-\DeclareMathOperator{\N}{N}
-\DeclareMathOperator{\opdiv}{div}
-\DeclareMathOperator{\nrd}{nrd}
-\DeclareMathOperator{\ord}{ord}
-\DeclareMathOperator{\Out}{Out}
-\DeclareMathOperator{\PGL}{PGL}
-\DeclareMathOperator{\PSL}{PSL}
-\DeclareMathOperator{\Real}{Re}
-\DeclareMathOperator{\repart}{Re}
-\DeclareMathOperator{\SO}{SO}
-\DeclareMathOperator{\Spec}{Spec}
-\DeclareMathOperator{\Stab}{Stab}
-\DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\GL}{GL}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\(P)SL}{(P)SL}
-\DeclareMathOperator{\PSU}{PSU}
-
-\let\div\relax
-\DeclareMathOperator{\div}{div}
-
-\newcommand{\C}{\mathbb C}
-\newcommand{\F}{\mathbb F}
-\newcommand{\HH}{\mathbb H}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Change or add to as desired. 
+%  These two commands make the first enumerations look like (a)
+%  And the second level like (i).  
+% \renewcommand{\labelenumi}{(\alph{enumi})}
+% \renewcommand{\labelenumii}{(\roman{enumii})}
+%  These commands make the section headings Boldface and not all
+%  caps. It also removes the chapter numbers  
+% \renewcommand{\chaptermark}[1]{\markboth{{\sc #1}}{{\sc #1}}}
+\renewcommand{\sectionmark}[1]{\markright{{\sc \thesection\ #1}}}
+%  These commands have lowercase headings with chapter numbers. 
+%\renewcommand{\chaptermark}[1]{markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}} 
+\newcommand{\OO}{\mathcal O}
 \newcommand{\PP}{\mathbb P}
-\newcommand{\Q}{\mathbb Q}
-\newcommand{\R}{\mathbb R}
-\newcommand{\Z}{\mathbb Z}
-\newcommand{\Qbar}{{\mathbb Q}^{\textup{al}}}
-\newcommand{\Qal}{{\mathbb Q}^{\textup{al}}}
-\newcommand{\kbar}{\overline{k}}
-\newcommand{\Qab}{{\mathbb Q}_{\textup{ab}}}
-
-\newcommand{\T}{\mathcal T}
-\renewcommand{\L}{\mathscr L}
-\DeclareMathOperator{\Princ}{Princ}
-
-\newcommand{\newt}{\mu}
-
-% \newcommand{\Belyi}{Bely\u{\i}}
-\newcommand{\Belyi}{Belyi}
-
-\newcommand{\fraka}{\mathfrak{a}}
-\newcommand{\frakd}{\mathfrak{d}}
-\newcommand{\frakn}{\mathfrak{n}}
-\newcommand{\frakM}{\mathfrak{M}}
-\newcommand{\frakN}{\mathfrak{N}}
-\newcommand{\frakp}{\mathfrak{p}}
-\newcommand{\frakP}{\mathfrak{P}}
-\newcommand{\frakq}{\mathfrak{q}}
-
-\newcommand{\calD}{\mathcal{D}}
-\newcommand{\calG}{\mathcal{G}}
-\newcommand{\calH}{\mathcal{H}}
-\newcommand{\calM}{\mathcal{M}}
-\newcommand{\calO}{\mathcal{O}}
-\newcommand{\calP}{\mathcal{P}}
-
-\newcommand{\psmod}[1]{~(\textup{\text{mod}}~{#1})}
-\newcommand{\legen}[2]{\left(\frac{#1}{#2}\right)}
-
-\newcommand{\quat}[2]{\displaystyle{\biggl(\frac{#1}{#2}\biggr)}}
-
-\newcommand{\la}{\langle}
-\newcommand{\ra}{\rangle}
-
-\newcommand{\gunder}{\underline{g}}
-\newcommand{\tunder}{\underline{t}}
-\newcommand{\Cunder}{\underline{C}}
-
-\DeclareMathOperator{\opchar}{char}
-
-\newcommand{\Deltabar}{\overline{\Delta}}
-\newcommand{\gammabar}{\overline{\gamma}}
-\newcommand{\Gammabar}{\overline{\Gamma}}
-\newcommand{\Fbar}{\overline{F}}
-\newcommand{\Bbar}{\overline{B}}
-\newcommand{\calObar}{\overline{\mathcal{O}}}
-\newcommand{\frakpbar}{\overline{\mathfrak{p}}}
-\newcommand{\frakdbar}{\overline{\mathfrak{d}}}
-
-\newcommand{\zetabar}{\overline{\zeta}}
-
-\newcommand{\sbwk}{{}_{\textup{wkrat}}}
-\newcommand{\sbnum}{{}_{\textup{num}}}
-\newcommand{\sbrat}{{}_{\textup{rat}}}
-\newcommand{\sbtr}{{}_{\textup{tr}}}
-\newcommand{\sbtors}{{}_{\textup{tors}}}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\ns}{\operatorname{ns}}
-
-\newcommand{\prodprime}{\sideset{}{^{'}}{\prod}}
-
-\newcommand{\Bhat}{\widehat{B}}
-\newcommand{\Fhat}{\widehat{F}}
-\newcommand{\PGamma}{\mathrm{P}\Gamma}
-\newcommand{\calOhat}{\widehat{\mathcal O}}
-\newcommand{\gammahat}{\widehat{\gamma}}
-\newcommand{\alphahat}{\widehat{\alpha}}
-\newcommand{\ahat}{\widehat{a}}
-\newcommand{\Zhat}{\widehat{\mathbb Z}}
-\newcommand{\ZFhat}{\widehat{\mathbb Z}_F}
-
-\newcommand{\Part}{\mathrm{Part}}
-
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\renewcommand{\AA}{\mathbb A}
+\newcommand{\defi}[1]{\textsf{#1}}
 \newcommand{\jv}[1]{{\color{red} \sf JV: [#1]}}
-
-\newcommand{\sss}[1]{{\color{green} \sf S$^3$: [#1]}}
 \newcommand{\mm}[1]{{\color{blue} \sf MM: [#1]}}
-\newcommand{\mk}[1]{{\color{orange} \sf MK: [#1]}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\QQal}{{\mathbb Q}^{\textup{al}}}
+\newcommand{\FFqal}{{\mathbb F}_q^{\textup{al}}}
+\newcommand{\QQab}{{\mathbb Q}^{\textup{ab}}}
+\newcommand{\QQbar}{{\mathbb Q}^{\textup{al}}}
+\newcommand{\Kal}{{{K}^{\textup{al}}}}
+\newcommand{\Kab}{{K}^{\textup{ab}}}
+\newcommand{\kbar}{\overline{k}}
+\newcommand{\Kbar}{\overline{K}}
+\newcommand{\LL}{\mathscr L}
+\newcommand{\sm}{\setminus}
+\newcommand{\FF}{\mathbb{F}}
+\renewcommand{\ker}{\operatorname{ker}}
 
-\newcommand{\jrs}[1]{{\color{cyan} \sf JRS: [#1]}}
+\DeclareMathOperator{\con}{con}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Princ}{Princ}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\ddiv}{div}
+\DeclareMathOperator{\sat}{sat}
+\DeclareMathOperator{\ddeg}{deg}
+\DeclareMathOperator{\ddim}{dim}
+\DeclareMathOperator{\rred}{red}
+% \renewcommand{\rred}{\operatorname{red}}
+\DeclareMathOperator{\Lifts}{Lifts}
+\DeclareMathOperator{\order}{order}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Mon}{Mon}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\orb}{orb}
+\DeclareMathOperator{\id}{id}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\charpoly}{charpoly}
+% \DeclareMathOperator{\det}{det}
+\DeclareMathOperator{\Tr}{tr}
+\DeclareMathOperator{\Pl}{Pl}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Jac}{Jac}
 
-\setcounter{tocdepth}{1}
-
-\everymath{\displaystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%numberwithin section for
+%tables equations and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+% \renewcommand{\thefigure}{\arabic{chapter}.\arabic{section}.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{equation}}
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+% \numberwithin{table}{section}
+% \counterwithin{equation}{section}
+% \counterwithin{figure}{section}
+% \counterwithin{table}{section}
+% \renewcommand{\thefigure}{\arabic{figure}}
+%%%%%%%%%
+\makeatletter
+\let\c@equation\c@figure
+\makeatother
+% A basic set of theorem declarations.  Add or remove as desired. 
+% \newtheorem{prop}{Proposition}[chapter]
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{conj}[equation]{Conjecture}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{corr}[equation]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{alg}[equation]{Algorithm}
+\newtheorem{notation}[equation]{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{example}[equation]{Example}
+\newtheorem*{claim}{Claim}
+\newtheorem{question}[equation]{Question}
 
 \begin{document}
 
@@ -227,24 +410,32 @@
 \date{\today}
 
 \begin{abstract}
+  In Seciton \ref{sec:background}
+  we review some background about dessins d'enfants,
+  Belyi maps, and some of the reasons the reader
+  might be interested in these objects.
+  In Section \ref{sec:catalogs}
+  we review the existing methods for drawing
+  pictures of dessins d'enfants and the available
+  catalogs in the literature.
 \end{abstract}
 
 \maketitle
 \tableofcontents
 
-\section{Introduction}{
+\section{Background}{\label{sec:background}
+  \subsection{Equivalent categories}{
+    \subsection{Dessins}{
+    }
+    \subsection{Clean dessins}{
+    }
+    \subsection{Ribbon graphs}{
+    }
+    \subsection{A zoo of bijections}{
+    }
+  }
 }
-\section{Equivalent categories}{
-  \subsection{Dessins}{
-  }
-  \subsection{Clean dessins}{
-  }
-  \subsection{Ribbon graphs}{
-  }
-  \subsection{A zoo of bijections}{
-  }
-}
-\section{Existing catalogs}{
+\section{Existing catalogs}{\label{sec:catalogs}
 }
 \section{Drawing techniques}{
 }
@@ -261,7 +452,6 @@
 
 \nocite{*}
 \bibliographystyle{amsplain}
-\addcontentsline{toc}{chapter}{References}
 \bibliography{dessindraw}
 
 %\begin{thebibliography}{999}
