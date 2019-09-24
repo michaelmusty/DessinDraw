@@ -14,12 +14,12 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Petal") -> Any
   /* DD := TriangleUnitDisc(Delta); */
   /* D0 := DD!0; */
   /* FDDelta := FundamentalDomain(Delta, DD); */
-  if Al eq "Full" then
-    frontier := [1];
+  /* if Al eq "Full" then */
+    /* frontier := [1]; */
     // Build basic graph
     /* epses := [Delta.1, Delta.1^-1, Delta.2, Delta.2^-1]; */
-    epses := [da, da^-1, db, db^-1];
-    while not IsEmpty(frontier) do
+    /* epses := [da, da^-1, db, db^-1]; */
+    /* while not IsEmpty(frontier) do */
     /*   dists := [Distance(D0, Label(Vertices(G)[i])*D0) : i in frontier]; */
     /*   _, jind := Min(dists); */
     /*   j := frontier[jind]; */

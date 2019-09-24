@@ -11,10 +11,13 @@ a := Order(sigma0);
 b := Order(sigma1);
 c := Order(sigmaoo);
 d := Degree(Parent(sigma0));
-/* Delta := ArithmeticTriangleGroup(a,b,c); */
 F3<da,db,dc> := FreeGroup(3);
 Delta<da,db,dc> := quo< F3 | [da^a, db^b, dc^c, dc*db*da] >;
-G := sub< Sym(d) | sigma>;
-pi := hom< Delta -> G | sigma>;
+mon := sub< Sym(d) | sigma>;
+pi := hom< Delta -> mon | sigma>;
+
+G := MultiDigraph<d | >;
+AssignLabel(~G, Vertices(G)[1], Delta!1);
+sidepairing := [];
 
 /* CosetGraph(sigma); */
