@@ -1,49 +1,42 @@
-intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Petal") -> Any
+intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Full") -> Any
   {Returns a coset graph for the triangle subgroup Gamma corresponding to the permutation triple sigma. Gamma is an index d subgroup of the triangle group Delta(a,b,c) where a,b,c are the orders of sigma0,sigma1,sigmaoo respectively and d is the degree of the ambient symmetric group. If Al eq "Petal", then prefer 'a' moves; otherwise, "Full" gives 'a' and 'b' moves.}
   sigma0, sigma1, sigmaoo := Explode(sigma);
   a := Order(sigma0);
   b := Order(sigma1);
   c := Order(sigmaoo);
   d := Degree(Parent(sigma0));
-  /* Delta := ArithmeticTriangleGroup(a,b,c); */
   F3<da,db,dc> := FreeGroup(3);
   Delta<da,db,dc> := quo< F3 | [da^a, db^b, dc^c, dc*db*da] >;
   G := MultiDigraph<d | >;
   AssignLabel(~G, Vertices(G)[1], Delta!1);
+  mon := sub< Sym(d) | sigma>;
+  pi := hom< Delta -> mon | sigma>;
   sidepairing := [];
-  /* DD := TriangleUnitDisc(Delta); */
-  /* D0 := DD!0; */
-  /* FDDelta := FundamentalDomain(Delta, DD); */
-  /* if Al eq "Full" then */
-    /* frontier := [1]; */
-    // Build basic graph
-    /* epses := [Delta.1, Delta.1^-1, Delta.2, Delta.2^-1]; */
-    /* epses := [da, da^-1, db, db^-1]; */
-    /* while not IsEmpty(frontier) do */
-    /*   dists := [Distance(D0, Label(Vertices(G)[i])*D0) : i in frontier]; */
-    /*   _, jind := Min(dists); */
-    /*   j := frontier[jind]; */
-    /*   vprint Shimura : [Label(Vertices(G)[i]) : i in frontier]; */
-    /*   vprint Shimura : dists; */
-    /*   vprintf Shimura : "Taking jind = %o, with distance %o and label %o\n", jind, dists[jind], Label(Vertices(G)[j]); */
-    /*   Remove(~frontier, jind); */
-
-    /*   alphaj := Label(Vertices(G)[j]); */
-    /*   for eps in epses do */
-    /*     i := 1^(pi(alphaj*eps)); */
-    /*     AddEdge(~G, Vertices(G)[j], Vertices(G)[i], eps); */
-    /*     if IsLabelled(Vertices(G)[i]) then */
-    /*       alphai := Label(Vertices(G)[i]); */
-    /*       gamma := alphaj*eps*alphai^-1; */
-    /*       if not IsScalar(Quaternion(gamma)) then */
-    /*         Append(~sidepairing, [* gamma, <j, eps>, <i, eps^-1> *]); */
-    /*       end if; */
-    /*     else */
-    /*       AssignLabel(~G, Vertices(G)[i], alphaj*eps); */
-    /*       Append(~frontier, i); */
-    /*     end if; */
-    /*   end for; */
-    /* end while; */
+  if Al eq "Full" then
+    frontier := [1];
+    epses := [da, da^-1, db, db^-1];
+    while not IsEmpty(frontier) do
+      j := frontier[1];
+      Remove(~frontier, 1);
+      vj := Vertices(G)[j];
+      alphaj := Label(vj);
+      for eps in epses do
+        i := 1^(pi(alphaj*eps));
+        vi := Vertices(G)[i];
+        AddEdge(~G, vj, vi, eps);
+        if IsLabelled(vi) then
+          alphai := Label(vi);
+          gamma := alphaj*eps*alphai^-1;
+          if not (gamma eq Identity(Parent(gamma))) then
+            Append(~sidepairing, [* gamma, <j, eps>, <i, eps^-1> *]);
+          end if;
+        else
+          AssignLabel(~G, vi, alphaj*eps);
+          Append(~frontier, i);
+        end if;
+      end for;
+    end while;
+  end if;
 
   /* else // Al eq "Petal" */
     /* frontierA := [1]; */
@@ -238,5 +231,5 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Petal") -> Any
   /* Gamma`TriangleSidePairing := sidepairing; */
 
   /* return cosets, G, sidepairing; */
-  return G;
+  return G, sidepairing;
 end intrinsic;
