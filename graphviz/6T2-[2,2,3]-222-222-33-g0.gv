@@ -1,0 +1,32 @@
+digraph G {
+v_1 [ label = "id" ];
+v_2 [ label = "da * db * da" ];
+v_3 [ label = "da * db" ];
+v_4 [ label = "da" ];
+v_5 [ label = "db * da" ];
+v_6 [ label = "db" ];
+v_1 -> v_4 [ label = "da" ];
+v_1 -> v_4 [ color=lightgray, label = "da^-1" ];
+v_1 -> v_6 [ label = "db" ];
+v_1 -> v_6 [ color=lightgray, label = "db^-1" ];
+v_2 -> v_3 [ color=lightgray, label = "da" ];
+v_2 -> v_3 [ label = "da^-1" ];
+v_2 -> v_5 [ color=lightgray, label = "db" ];
+v_2 -> v_5 [ color=lightgray, label = "db^-1" ];
+v_3 -> v_2 [ label = "da" ];
+v_3 -> v_2 [ color=lightgray, label = "da^-1" ];
+v_3 -> v_4 [ color=lightgray, label = "db" ];
+v_3 -> v_4 [ label = "db^-1" ];
+v_4 -> v_1 [ color=lightgray, label = "da" ];
+v_4 -> v_1 [ label = "da^-1" ];
+v_4 -> v_3 [ label = "db" ];
+v_4 -> v_3 [ color=lightgray, label = "db^-1" ];
+v_5 -> v_2 [ color=lightgray, label = "db" ];
+v_5 -> v_2 [ color=lightgray, label = "db^-1" ];
+v_5 -> v_6 [ color=lightgray, label = "da" ];
+v_5 -> v_6 [ label = "da^-1" ];
+v_6 -> v_1 [ color=lightgray, label = "db" ];
+v_6 -> v_1 [ label = "db^-1" ];
+v_6 -> v_5 [ label = "da" ];
+v_6 -> v_5 [ color=lightgray, label = "da^-1" ];
+}

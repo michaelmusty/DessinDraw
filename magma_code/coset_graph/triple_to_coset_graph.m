@@ -29,7 +29,8 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Full") -> Any
           gamma := alphaj*eps*alphai^-1;
           if not (gamma eq Identity(Parent(gamma))) then
             AddEdge(~G, vj, vi, [* eps, "side" *]);
-            Append(~sidepairing, [* gamma, <j, eps>, <i, eps^-1> *]);
+            /* Append(~sidepairing, [* gamma, <j, eps>, <i, eps^-1> *]); */
+            Append(~sidepairing, [* gamma, <vj, eps>, <vi, eps^-1> *]);
           else
             AddEdge(~G, vj, vi, [* eps, "interior" *]);
           end if;
@@ -41,7 +42,6 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Full") -> Any
       end for;
     end while;
   end if;
-
   /* else // Al eq "Petal" */
     /* frontierA := [1]; */
     /* frontierB := [1]; */
@@ -155,85 +155,5 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Full") -> Any
     /*   end for; */
     /* end while; */
   /* end if; */
-
-  /* if FindSmallestCosets then */
-    /* // Find smallest cosets */
-    /* gammas := [d[1] : d in sidepairing]; */
-    /* DD := TriangleUnitDisc(Gamma); */
-    /* domain := ChangeUniverse(gammas, Gamma); */
-    /* domain := [gamma : gamma in domain | not IsScalar(Quaternion(gamma))]; */
-
-    /* vprintf Shimura : "Interreducing...\n"; */
-    /* bl, domainnew := InternalShimuraInterreduce(domain, DD : FindEnveloper := false); */
-
-    /* m := #domain; */
-    /* mseq := [1,1]; */
-    /* while not bl do */
-    /*   vprintf Shimura: "%o ", mseq; */
-    /*   gamma := Gamma!Id(Gamma); */
-    /*   for ms in mseq do */
-    /*     gamma := gamma*domain[ms]; */
-    /*   end for; */
-    /*   deltared := ShimuraReduceUnit(gamma, domainnew, DD); */
-    /*   if not IsScalar(Quaternion(deltared[1])) then */
-    /*     bl, domainnew := InternalShimuraInterreduce(domainnew cat [deltared[1], */
-    /*                              deltared[1]^-1], DD : FindEnveloper := false); */
-    /*   end if; */
-    /*   mseq[1] +:= 1; */
-    /*   i := 1; */
-    /*   while i le #mseq and mseq[i] gt m do */
-    /*     mseq[i] := 1; */
-    /*     i +:= 1; */
-    /*     if i le #mseq then */
-    /*       mseq[i] +:= 1; */
-    /*     end if; */
-    /*   end while; */
-    /*   if i gt #mseq then */
-    /*     mseq := mseq cat [1]; */
-    /*   end if; */
-    /* end while; */
-    /* domain := domainnew; */
-
-    /* for j := 1 to d do */
-    /*   v := Vertices(G)[j]; */
-    /*   alpha := Label(v); */
-
-    /*   repeat */
-    /*     passed := true; */
-
-    /*     alphadists := [Abs(ComplexValue(alpha*w)) : w in FDDelta]; */
-    /*     maxadist := Max(alphadists); */
-    /*     for gamma in domain do */
-    /*       gammaalphadists := [Abs(ComplexValue(gamma*alpha*w)) : w in FDDelta]; */
-    /*       maxgadist := Max(gammaalphadists); */
-    /*       if maxgadist lt maxadist then */
-    /*         alpha := gamma*alpha; */
-    /*         vprintf Shimura : "alphadists = %o\n", alphadists; */
-    /*         vprintf Shimura : "gammaalphdists = %o\n", gammaalphadists; */
-    /*         vprintf Shimura : "Shrinking vertex %o by %o!\n", j, gamma; */
-    /*         AssignLabel(~G, v, alpha); */
-    /*         for k := 1 to #sidepairing do */
-    /*           side := sidepairing[k]; */
-    /*           if side[2][1] eq j then */
-    /*             sidepairing[k][1] := gamma*side[1]; */
-    /*           elif side[3][1] eq j then */
-    /*             sidepairing[k][1] := side[1]*gamma^-1; */
-    /*           end if; */
-    /*         end for; */
-    /*         passed := false; */
-    /*         break; */
-    /*       end if; */
-    /*     end for; */
-    /*   until passed; */
-    /* end for; */
-  /* end if; */
-
-  /* cosets := [Label(Vertices(G)[i]) : i in [1..d]]; */
-
-  /* Gamma`TriangleCosets := cosets; */
-  /* Gamma`TriangleCosetGraph := G; */
-  /* Gamma`TriangleSidePairing := sidepairing; */
-
-  /* return cosets, G, sidepairing; */
   return G, sidepairing;
 end intrinsic;

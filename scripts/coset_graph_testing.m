@@ -2,13 +2,13 @@ SetDebugOnError(true);
 load "config.m";
 
 // user input
-d := 2;
-group := 1;
+d := 30;
+group := 2;
 pass := 1;
 
 // code
-db := TransitiveGroups(d);
-passports := PassportRepresentatives(db[group]);
+tdb := TransitiveGroups(d);
+passports := PassportRepresentatives(tdb[group]);
 passport := passports[pass];
 sigma := passport[2][1];
 name := Name(sigma);
