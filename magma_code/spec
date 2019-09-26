@@ -8,6 +8,7 @@
   coset_graph
   {
     triple_to_coset_graph.m
+    graphviz.m
   }
   misc
   {

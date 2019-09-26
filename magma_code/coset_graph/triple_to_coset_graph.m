@@ -23,14 +23,18 @@ intrinsic CosetGraph(sigma::SeqEnum[GrpPermElt]: Al := "Full") -> Any
       for eps in epses do
         i := 1^(pi(alphaj*eps));
         vi := Vertices(G)[i];
-        AddEdge(~G, vj, vi, eps);
+        /* AddEdge(~G, vj, vi, eps); */
         if IsLabelled(vi) then
           alphai := Label(vi);
           gamma := alphaj*eps*alphai^-1;
           if not (gamma eq Identity(Parent(gamma))) then
+            AddEdge(~G, vj, vi, [* eps, "side" *]);
             Append(~sidepairing, [* gamma, <j, eps>, <i, eps^-1> *]);
+          else
+            AddEdge(~G, vj, vi, [* eps, "interior" *]);
           end if;
         else
+          AddEdge(~G, vj, vi, [* eps, "interior" *]);
           AssignLabel(~G, vi, alphaj*eps);
           Append(~frontier, i);
         end if;

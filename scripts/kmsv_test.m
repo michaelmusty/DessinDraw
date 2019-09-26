@@ -8,3 +8,6 @@ sigmaoo := (sigma1*sigma0)^-1;
 sigma := [sigma0, sigma1, sigmaoo];
 
 G, sidepairing := CosetGraph(sigma);
+str := CosetGraphToDotString(G);
+
+WriteCosetGraphToFile(sigma);
