@@ -9,4 +9,8 @@
   {
     triple_to_coset_graph.m
   }
+  misc
+  {
+    generate.m
+  }
 }
