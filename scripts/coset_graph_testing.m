@@ -2,9 +2,9 @@ SetDebugOnError(true);
 load "config.m";
 
 // user input
-d := 30;
-group := 2;
-pass := 1;
+d := 4;
+group := 5;
+pass := 2;
 
 // code
 tdb := TransitiveGroups(d);
