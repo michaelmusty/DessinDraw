@@ -3,7 +3,7 @@ load "config.m";
 
 // user input
 d := 4;
-group := 5;
+group := 1;
 pass := 2;
 
 // code
@@ -16,4 +16,4 @@ name := Name(sigma);
 G, sidepairing := CosetGraph(sigma);
 str := CosetGraphToDotString(G);
 
-WriteCosetGraphToFile(sigma);
+/* WriteCosetGraphToFile(sigma); */
