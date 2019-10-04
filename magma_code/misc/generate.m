@@ -46,8 +46,9 @@ intrinsic Name(sigma::SeqEnum[GrpPermElt]) -> MonStgElt
       assert d eq d_test;
       name := Sprintf("%oT%o-[%o,%o,%o]-", d, g, a, b, c);
     else
-      size, g := Explode(IdentifyGroup(G));
-      name := Sprintf("%oS%o,%o-[%o,%o,%o]-", d, size, g, a, b, c);
+      /* size, g := Explode(IdentifyGroup(G)); */
+      /* name := Sprintf("%oS%o,%o-[%o,%o,%o]-", d, size, g, a, b, c); */
+      name := Sprintf("%o-[%o,%o,%o]-", Hash(G), a, b, c);
     end if;
     cs0, cs1, csoo := Explode([CycleStructure(sigma[i]) : i in {1..3}]);
     for i in {1..#cs0-1} do

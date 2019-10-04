@@ -1,10 +1,11 @@
 SetDebugOnError(true);
 load "config.m";
+SetVerbose("Passport", true);
 
 // user input
-d := 4;
-group := 1;
-pass := 2;
+d := 47;
+group := 5;
+pass := 1;
 
 // code
 tdb := TransitiveGroups(d);
@@ -16,4 +17,4 @@ name := Name(sigma);
 G, sidepairing := CosetGraph(sigma);
 str := CosetGraphToDotString(G);
 
-/* WriteCosetGraphToFile(sigma); */
+WriteCosetGraphToFile(sigma);
