@@ -16,7 +16,7 @@ time assert IsTransitive(sub<Sym(d)|sigma>);
 /* passport := passports[1]; */
 /* name := Name(sigma); */
 
-time G, sidepairing := CosetGraph(sigma);
-str := CosetGraphToDotString(G);
+/* time G, sidepairing := CosetGraph(sigma); */
+/* str := CosetGraphToDotString(G); */
 
-WriteCosetGraphToFile(sigma);
+/* WriteCosetGraphToFile(sigma); */
