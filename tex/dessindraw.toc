@@ -1,14 +1,14 @@
-\contentsline {section}{\tocsection {}{1}{Background}}{1}{section.1}% 
-\contentsline {subsection}{\tocsubsection {}{1.1}{Equivalent categories}}{1}{subsection.1.1}% 
-\contentsline {subsection}{\tocsubsection {}{1.2}{Dessins}}{1}{subsection.1.2}% 
-\contentsline {subsection}{\tocsubsection {}{1.3}{Clean dessins}}{1}{subsection.1.3}% 
-\contentsline {subsection}{\tocsubsection {}{1.4}{Ribbon graphs}}{1}{subsection.1.4}% 
-\contentsline {section}{\tocsection {}{2}{Existing catalogs}}{2}{section.2}% 
-\contentsline {section}{\tocsection {}{3}{Drawing techniques}}{2}{section.3}% 
-\contentsline {section}{\tocsection {}{4}{Degree $\leq 4$}}{2}{section.4}% 
-\contentsline {section}{\tocsection {}{5}{Degree $5$}}{2}{section.5}% 
-\contentsline {section}{\tocsection {}{6}{Degree $6$}}{2}{section.6}% 
-\contentsline {section}{\tocsection {}{7}{Degree $7$}}{2}{section.7}% 
-\contentsline {section}{\tocsection {}{8}{Degree $8$}}{2}{section.8}% 
-\contentsline {section}{\tocsection {}{9}{Conclusions}}{2}{section.9}% 
-\contentsline {section}{\tocsection {}{}{References}}{2}{section*.2}% 
+\contentsline {section}{\tocsection {}{1}{Background}}{1}{section.1}
+\contentsline {subsection}{\tocsubsection {}{1.1}{Equivalent categories}}{1}{subsection.1.1}
+\contentsline {subsection}{\tocsubsection {}{1.2}{Dessins}}{1}{subsection.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.3}{Clean dessins}}{1}{subsection.1.3}
+\contentsline {subsection}{\tocsubsection {}{1.4}{Ribbon graphs}}{1}{subsection.1.4}
+\contentsline {section}{\tocsection {}{2}{Existing catalogs}}{2}{section.2}
+\contentsline {section}{\tocsection {}{3}{Drawing techniques}}{2}{section.3}
+\contentsline {section}{\tocsection {}{4}{Degree $\leq 4$}}{2}{section.4}
+\contentsline {section}{\tocsection {}{5}{Degree $5$}}{2}{section.5}
+\contentsline {section}{\tocsection {}{6}{Degree $6$}}{2}{section.6}
+\contentsline {section}{\tocsection {}{7}{Degree $7$}}{2}{section.7}
+\contentsline {section}{\tocsection {}{8}{Degree $8$}}{2}{section.8}
+\contentsline {section}{\tocsection {}{9}{Conclusions}}{2}{section.9}
+\contentsline {section}{\tocsection {}{}{References}}{2}{section*.2}
